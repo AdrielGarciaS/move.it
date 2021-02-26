@@ -38,6 +38,7 @@ body {
 
 body, input, textarea, button {
   font: 400 16px "Inter", sans-serif;
+  outline: 0;
 }
 
 button {
