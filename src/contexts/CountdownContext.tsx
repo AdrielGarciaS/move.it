@@ -16,7 +16,7 @@ interface Props {
   children: ReactNode
 }
 
-const initialTime = 0.1 * 60
+const initialTime = 25 * 60
 
 let countdownTimeout: NodeJS.Timeout
 
