@@ -10,6 +10,7 @@ import { CountdownProvider } from 'contexts/CountdownContext'
 import { ChallengesProvider } from 'contexts/ChallengesContext'
 
 import styles from 'styles/pages/Home.module.css'
+import { Toggle } from 'components/Toggle'
 
 interface Props {
   level: number
@@ -30,6 +31,10 @@ export default function Home(props: Props) {
         </Head>
 
         <ExperienceBar />
+
+        <aside>
+          <Toggle />
+        </aside>
 
         <CountdownProvider>
           <section>

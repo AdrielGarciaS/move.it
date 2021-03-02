@@ -9,11 +9,15 @@ export function Countdown() {
     isActive, 
     hasFinished, 
     resetCountdown, 
-    startCountdown
+    startCountdown,
+    currentTime,
+    totalTime
   } = useCountdown()
 
   const [leftMinute, rightMinute] = String(minutes).padStart(2, '0').split('')
   const [leftSecond, rightSecond] = String(seconds).padStart(2, '0').split('')
+
+  const percentCountdown = Math.round((currentTime * 100) / totalTime)
 
   return (
     <>
@@ -45,6 +49,7 @@ export function Countdown() {
               onClick={resetCountdown}
             >
               Abandonar ciclo
+              <span style={{ width: `${percentCountdown}%` }} />
             </button>
           ) : (
             <button

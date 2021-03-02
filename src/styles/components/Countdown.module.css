@@ -24,11 +24,11 @@
 }
 
 .container > div span:first-child {
-  border-right: 1px solid #f0f5f3;
+  border-right: 1px solid var(--background);
 }
 
 .container > div span:last-child {
-  border-left: 1px solid #f0f5f3;
+  border-left: 1px solid var(--background);
 }
 
 .container > span {
@@ -61,8 +61,21 @@
 }
 
 .countdownButtonActive {
+  position: relative;
+
   background: var(--white);
   color: var(--title);
+}
+
+.countdownButtonActive span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  border-bottom: 3px solid var(--green);
+  border-radius: 4px;
+  transition: width 0.01s;
 }
 
 .countdownButtonActive:not(:disabled):hover {

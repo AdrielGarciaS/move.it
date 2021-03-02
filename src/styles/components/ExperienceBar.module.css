@@ -1,13 +1,13 @@
-.experienceBar {
+.container {
   display: flex;
   align-items: center;
 }
 
-.experienceBar span {
+.container span {
   font-size: 1rem;
 }
 
-.experienceBar > div {
+.container > div {
   flex: 1;
   height: 4px;
   border-radius: 4px;
@@ -16,7 +16,7 @@
   position: relative;
 }
 
-.experienceBar > div > div {
+.container > div > div {
   height: 4px;
   border-radius: 4px;
   background: var(--green);
@@ -26,4 +26,8 @@ span.currentExperience {
   position: absolute;
   top: 12px;
   transform: translateX(-50%);
+}
+
+.progressBar {
+  transition: width 2s;
 }

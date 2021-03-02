@@ -6,6 +6,8 @@ const CountdownContext = createContext({} as CountdownContextData)
 interface CountdownContextData {
   minutes: number
   seconds: number
+  currentTime: number
+  totalTime: number
   isActive: boolean
   hasFinished: boolean
   startCountdown(): void
@@ -64,7 +66,9 @@ export function CountdownProvider({ children }: Props) {
         isActive,
         hasFinished,
         startCountdown,
-        resetCountdown
+        resetCountdown,
+        currentTime: time,
+        totalTime: initialTime
       }}
     >
       {children}
